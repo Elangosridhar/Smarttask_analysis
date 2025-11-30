@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', serif; /* Changed to a more classical serif font for elegance */
+    line-height: 1.6;
+    color: #2c3e50; /* Dark charcoal for text, evoking classic ink */
+    background: linear-gradient(135deg, #f4f1e8 0%, #e8dcc0 100%); /* Warm parchment-like gradient for a classical, timeless feel */
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50; /* Dark text on light background for readability */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.strategy-section {
+    grid-column: 1 / -1;
+    background: #fdfdfd; /* Off-white for a clean, classical look */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Softer shadow */
+    border: 1px solid #d4af37; /* Subtle gold border for elegance */
+}
+
+.strategy-section label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #2c3e50;
+}
+
+.strategy-section select {
+    padding: 8px 12px;
+    border: 2px solid #d4af37; /* Gold border */
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #fff;
+    color: #2c3e50;
+}
+
+.input-section, .output-section {
+    background: #fdfdfd; /* Consistent off-white */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #d4af37; /* Gold border */
+}
+
+.input-section h2, .output-section h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #d4af37; /* Gold underline */
+    padding-bottom: 10px;
+}
+
+.task-form {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #d4af37; /* Gold border */
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #fff;
+    color: #2c3e50;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #b8860b; /* Darker gold on focus */
+}
+
+button {
+    background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%); /* Saddle brown gradient for a classical, earthy tone */
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.analyze-btn {
+    background: linear-gradient(135deg, #228b22 0%, #32cd32 100%); /* Forest green for analyze, evoking nature and classics */
+    margin-right: 10px;
+}
+
+.clear-btn {
+    background: linear-gradient(135deg, #8b0000 0%, #dc143c 100%); /* Dark red for clear, like classical crimson */
+}
+
+.bulk-input-section {
+    margin-bottom: 30px;
+}
+
+.bulk-input-section h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+#bulkInput {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    border: 2px solid #d4af37;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace; /* Monospace for code-like input, but classical */
+    font-size: 0.9rem;
+    background: #fff;
+    color: #2c3e50;
+    resize: vertical;
+}
+
+.task-list-section h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.task-list {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border: 1px solid #d4af37;
+    border-radius: 5px;
+    padding: 10px;
+    background: #f9f6f0; /* Light parchment */
+}
+
+.task-item {
+    background: #f0e68c; /* Khaki for a subtle, classical highlight */
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border-left: 4px solid #d4af37; /* Gold accent */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-item:last-child {
+    margin-bottom: 0;
+}
+
+.task-info {
+    flex: 1;
+}
+
+.task-title {
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #2c3e50;
+}
+
+.task-details {
+    font-size: 0.8rem;
+    color: #696969; /* Dim gray */
+}
+
+.remove-task {
+    background: #8b0000; /* Dark red */
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #d4af37; /* Gold spinner */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.priority-task {
+    background: #f9f6f0; /* Parchment */
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 6px solid;
+}
+
+.priority-high {
+    border-left-color: #8b0000; /* Dark red */
+    background: linear-gradient(135deg, #ffe4e1 0%, #fff0f5 100%); /* Light blush */
+}
+
+.priority-medium {
+    border-left-color: #daa520; /* Goldenrod */
+    background: linear-gradient(135deg, #faf0e6 0%, #fdf5e6 100%); /* Light linen */
+}
+
+.priority-low {
+    border-left-color: #228b22; /* Forest green */
+    background: linear-gradient(135deg, #f0fff0 0%, #f5fffa 100%); /* Mint cream */
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.task-score {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.task-explanation {
+    color: #696969;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.score-breakdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.score-item {
+    text-align: center;
+    padding: 8px;
+    background: #fdfdfd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border: 1px solid #d4af37;
+}
+
+.score-label {
+    font-size: 0.8rem;
+    color: #696969;
+    margin-bottom: 4px;
+}
+
+.score-value {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.error {
+    background: #ffe4e1; /* Light blush */
+    color: #8b0000;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #dc143c;
+}
+
+.hidden {
+    display: none;
+}
+
+.circular-deps-warning {
+    background: #faf0e6; /* Light linen */
+    color: #daa520;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #daa520;
+    margin-bottom: 20px;
+}
